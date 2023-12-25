@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>События: change, input, cut, copy, paste</title>
+    <style>
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="initial">Начальная сумма:</label>
+    <input
+      type="number"
+      id="initial"
+      min="0"
+      value="1000"
+      oninput="calculateResult()"
+    />
+    <label for="interest">Проценты (годовые):</label>
+    <input
+      type="number"
+      id="interest"
+      min="0"
+      max="100"
+      step="0.01"
+      value="5"
+      oninput="calculateResult()"
+    />
+    <label for="years">Срок (в годах):</label>
+    <input
+      type="number"
+      id="years"
+      min="1"
+      value="1"
+      oninput="calculateResult()"
+    />
+    <p>Результат: <span id="result">1000</span> рублей</p>
+    <script src="./index.js"></script>
+  </body>
+</html>
