@@ -1,0 +1,27 @@
+/* Поместите мяч в центр поля (CSS) */
+
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+/* vertical-align + table-cell + position = ? */
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.arrow {
+  border: 1px solid black;
+  font-size: 28px;
+}
+
