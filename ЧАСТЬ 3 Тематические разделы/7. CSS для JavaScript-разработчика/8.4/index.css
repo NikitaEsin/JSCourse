@@ -1,0 +1,88 @@
+/* Разница inline-block и float
+
+display: inline-block
+Преимущества:
+Прост в использовании и понимании.
+Более предсказуемое поведение по сравнению с float.
+Недостатки:
+Пробелы между элементами списка (LI) могут вызывать нежелательные отступы.
+Не так прост в управлении вертикальным выравниванием элементов.
+
+float: left
+Преимущества:
+Может быть полезен в старых версиях браузеров.
+Легко создавать сложные макеты с обтеканием текста.
+Недостатки:
+Требует дополнительных стилей для предотвращения обтекания содержимого.
+Более сложный с точки зрения управления, особенно при вертикальном выравнивании. */
+
+
+
+
+
+/* Дерево с многострочными узлами */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.tree {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.tree li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+.tree li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: url('icon-sprite.png') no-repeat; /* Подставьте путь к вашему CSS-спрайту */
+  background-position: 0 0; /* Подставьте правильные координаты для иконки */
+  cursor: pointer;
+}
+
+.tree a {
+  text-decoration: none;
+  color: #333;
+}
+
+.tree a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Добавить рамку, сохранив ширину */
+/*
+<style>
+  .left {
+    float: left;
+    width: 30%;
+    background: #aef;
+  }
+
+  .right {
+    float: right;
+    width: 70%;
+    background: tan;
+    border-left: 5px solid #333;  // Любой цвет и толщина, настраиваемые по вашему желанию 
+    padding-left: 10px;  // Любой отступ по вашему желанию 
+  }
+</style>
+
+<div class="left">
+ Левая<br>Колонка
+</div>
+<div class="right">
+ Правая<br>Колонка<br>...
+</div>    */
